@@ -14,4 +14,4 @@ def download(bot, update):
         pass
     else:
         return
-    update.reply_text(Translation.UPLOAD, reply_markup=InlineKeyboardMarkup[Translation.upload_buttons])
+    update.reply_text(Translation.UPLOAD, reply_markup=InlineKeyboardMarkup(Translation.upload_buttons))
