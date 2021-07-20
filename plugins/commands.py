@@ -9,17 +9,13 @@ def _start(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(str(update.from_user.first_name)),
-        reply_markup=InlineKeyboardMarkup(
+        reply_markup=InlineKeyboardMarkup[
             [
-                [
-                   InlineKeyboardButton(
-                       "Source", url="https://github.com/X-Gorn/MangaLoader"
-                   ),
-                   InlineKeyboardButton("Project Channel", url="https://t.me/xTeamBots"),
-                ],
-                [InlineKeyboardButton("Author", url="https://t.me/xgorn")],
-            ]
-        ),
+                InlineKeyboardButton('Source', url='https://github.com/X-Gorn/MangaLoader'), 
+                InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+            ],
+            [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
+        ],
         reply_to_message_id=update.message_id
     )
 
@@ -38,6 +34,6 @@ def _cleandir(bot, update):
     dirx = './Manga/'
     if os.path.isdir(dirx):
         shutil.rmtree(dirx)
-        update.reply_text('Successfully cleaned your download dir, now you can sent another link')
+        update.reply_text(Translation.CLEANDIR_SUCCESS)
     else:
-        update.reply_text('Your download dir are empty, use this command only if your bot are stuck')
+        update.reply_text(Translation.CLEANDIR_UNSUCCESS)
