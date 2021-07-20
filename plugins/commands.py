@@ -1,6 +1,6 @@
 import os, shutil
 from pyrogram import Client, filters
-from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types.bots_and_keyboards import InlineKeyboardMarkup
 from translation import Translation
 
 
@@ -8,13 +8,7 @@ from translation import Translation
 def _start(bot, update):
     update.reply_text(
         Translation.START_TEXT.format(str(update.from_user.first_name)),
-        reply_markup=InlineKeyboardMarkup[[
-            [
-                InlineKeyboardButton('Source', url='https://github.com/X-Gorn/MangaLoader'), 
-                InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
-            ],
-            [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
-        ]]
+        reply_markup=InlineKeyboardMarkup[Translation.start_buttons]
     )
 
 
