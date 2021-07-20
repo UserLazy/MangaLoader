@@ -14,4 +14,4 @@ async def download(bot, update):
         pass
     else:
         return
-    await update.reply_text(Translation.UPLOAD, reply_markup=InlineKeyboardMarkup(Translation.upload_buttons))
+    await update.reply_text(Translation.UPLOAD, quote=True, reply_markup=InlineKeyboardMarkup(Translation.upload_buttons))
