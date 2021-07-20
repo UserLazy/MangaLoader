@@ -7,8 +7,7 @@ from translation import Translation
 @Client.on_message(filters.private & filters.command('start'))
 def _start(bot, update):
     update.reply_text(
-        Translation.START_TEXT.format(str(update.from_user.first_name)),
-        reply_markup=InlineKeyboardMarkup(Translation.start_buttons)
+        Translation.START_TEXT.format(str(update.from_user.first_name)), reply_markup=InlineKeyboardMarkup(Translation.start_buttons)
     )
 
 
