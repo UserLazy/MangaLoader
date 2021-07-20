@@ -8,7 +8,7 @@ from translation import Translation
 def _start(bot, update):
     update.reply_text(
         Translation.START_TEXT.format(str(update.from_user.first_name)),
-        reply_markup=InlineKeyboardMarkup[Translation.start_buttons]
+        reply_markup=InlineKeyboardMarkup(Translation.start_buttons)
     )
 
 
