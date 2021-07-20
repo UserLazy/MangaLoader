@@ -8,13 +8,13 @@ from translation import Translation
 def _start(bot, update):
     update.reply_text(
         Translation.START_TEXT.format(str(update.from_user.first_name)),
-        reply_markup=InlineKeyboardMarkup[
+        reply_markup=InlineKeyboardMarkup[[
             [
                 InlineKeyboardButton('Source', url='https://github.com/X-Gorn/MangaLoader'), 
                 InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
             ],
             [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
-        ]
+        ]]
     )
 
 
