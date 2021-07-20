@@ -15,3 +15,11 @@ class Translation(object):
         ],
         [InlineKeyboardButton("as Folder", callback_data="folder")],
     ]
+    
+    start_buttons=[
+        [
+            InlineKeyboardButton('Source', url='https://github.com/X-Gorn/MangaLoader'), 
+            InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+        ],
+        [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
+    ]
