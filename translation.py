@@ -10,7 +10,7 @@ class Translation(object):
     
     upload_buttons=[
         [
-            InlineKeyboardButton('as PDF' callback_data='pdf'),
+            InlineKeyboardButton('as PDF', callback_data='pdf'),
             InlineKeyboardButton('as ZIP', callback_data='zip'),
         ],
         [InlineKeyboardButton('as Folder', callback_data='folder')],
